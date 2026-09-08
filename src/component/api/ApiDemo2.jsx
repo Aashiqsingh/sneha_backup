@@ -54,3 +54,14 @@ export const ApiDemo2 = () => {
     </div>
   )
 }
+
+
+// let users = {
+//     id : 1,
+//     name : "aashi",
+//     email : "aashi@gmail.com",
+//     password : "123456",
+//     data:['sneha','aashi','ashish']
+// }
+
+// users.data[0]

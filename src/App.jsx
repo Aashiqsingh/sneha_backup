@@ -20,6 +20,7 @@ import { ApiDemo1 } from './component/api/ApiDemo1';
 import { ApiDemo2 } from './component/api/ApiDemo2';
 import { PostApi1 } from './component/api/PostApi1';
 import { PostApi2 } from './component/api/PostApi2';
+import { DeleteApi1 } from './component/api/DeleteApi1';
 // import './App.css'
 
 
@@ -55,6 +56,7 @@ function App() {
         <Route path='/api2' element={<ApiDemo2/>}/>
         <Route path='/post1' element={<PostApi1/>}/>
         <Route path='/post2' element={<PostApi2/>}/>
+        <Route path='/delete1' element={<DeleteApi1/>}/>
       </Routes>
     </div>
   )

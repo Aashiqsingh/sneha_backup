@@ -13,6 +13,16 @@ export const ApiDemo2 = () => {
         setisLoading(true);
     }
 
+    const deleteData = async(id)=>{
+        // const red = await axios.delete(`https://node5.onrender.com/user/user/${id}`)
+        const res = await axios.delete("https://node5.onrender.com/user/user/"+id);
+        console.log(res);
+        if(res.status == 204)
+        {
+            getData();
+        }
+    }
+
 
 
   return (
@@ -30,6 +40,7 @@ export const ApiDemo2 = () => {
                     <th>Email</th>
                     <th>Password</th>
                     <th>Age</th>
+                    <th>Action</th>
                 </tr>
                     )
                 }
@@ -44,6 +55,7 @@ export const ApiDemo2 = () => {
                                 <td>{user.email}</td>
                                 <td>{user.password}</td>
                                 <td>{user.age}</td>
+                                <td><button onClick={()=>{deleteData(user._id)}} className='btn btn-danger'>DELETE</button></td>
                             </tr>
                         )
                     })

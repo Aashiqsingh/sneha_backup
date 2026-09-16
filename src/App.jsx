@@ -21,6 +21,7 @@ import { ApiDemo2 } from './component/api/ApiDemo2';
 import { PostApi1 } from './component/api/PostApi1';
 import { PostApi2 } from './component/api/PostApi2';
 import { DeleteApi1 } from './component/api/DeleteApi1';
+import { Update1 } from './component/api/Update1';
 // import './App.css'
 
 
@@ -57,6 +58,7 @@ function App() {
         <Route path='/post1' element={<PostApi1/>}/>
         <Route path='/post2' element={<PostApi2/>}/>
         <Route path='/delete1' element={<DeleteApi1/>}/>
+        <Route path='/update/:id' element={<Update1/>}/>
       </Routes>
     </div>
   )

@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export const ApiDemo2 = () => {
 
@@ -55,7 +56,10 @@ export const ApiDemo2 = () => {
                                 <td>{user.email}</td>
                                 <td>{user.password}</td>
                                 <td>{user.age}</td>
-                                <td><button onClick={()=>{deleteData(user._id)}} className='btn btn-danger'>DELETE</button></td>
+                                <td><button onClick={()=>{deleteData(user._id)}} className='btn btn-danger'>DELETE</button>
+                                    <Link to={`/update/${user._id}`} className='btn btn-primary'>Update</Link>
+                                </td>
+
                             </tr>
                         )
                     })
